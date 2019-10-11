@@ -48,6 +48,7 @@ public class Sensor extends Label {
         if (features != null) try
 		{
 			enroller.addFeatures(features);		// Add feature set to template.
+                        setText(enroller.getFeaturesNeeded()+" needed");
 		}
 		catch (DPFPImageQualityException ex) { }
 		finally {
@@ -68,7 +69,7 @@ public class Sensor extends Label {
 					//updateStatus();
 					//((MainForm)getOwner()).setTemplate(null);
 					//JOptionPane.showMessageDialog(EnrollmentForm.this, "The fingerprint template is not valid. Repeat fingerprint enrollment.", "Fingerprint Enrollment", JOptionPane.ERROR_MESSAGE);
-					//start();
+					start();
 					break;
 			}
 		}
